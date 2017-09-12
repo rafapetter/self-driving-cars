@@ -1,6 +1,6 @@
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 I used the numpy library to calculate summary statistics of the traffic signs data set:
 
@@ -10,16 +10,16 @@ The size of test set is 12630.
 The shape of traffic sign image is square 32 x 32 x 3.
 The number of classes/labels in the set is 43.
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the dataset. A bar chart showing the occurrences of each label on each dataset.
 We can notice that different signs are not uniformly distributed.
 
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/exploratory_1.png)
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to convert the images to grayscale because it helps isolate different visual attributes. Think about the lane line project, we converted to gray scale and then used Canny edge detection to find the gradient at different lines in the image.
 
@@ -27,7 +27,7 @@ Conversion of images to grayscale using openCV to allow the model to train on tr
 
 Then, all the data is normalized to zero mean and equal variance to be ready for deep learning. X_train = X_train / 255.0-0.5 X_valid = X_valid / 255.0-0.5 X_test = X_test / 255.0-0.5
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 The LeNet Lab Solution was the starting part for the traffic detection pipeline I created. Using Tensor Flow, Google's machine learning library to speed up development time. The Input was the german data set provided for free, the data set was already cleaned to only contain 32x32 pixel photos, saving the students from the many hours it takes to clean such a large data set. Data manipulation and conditioning can often be the most difficult part of creating a numeral network pipeline. While this project only required minor data to be loaded from a very clean data set, minor variation where added to go from the RGB color scale to a gray scale to better match the LeNet architecture.
 
@@ -52,11 +52,11 @@ My final model consisted of the following layers:
 |Dropout	| keep_prob 0.7|
 |Fully Connected Layer5 | Output = 43 |
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 The AdamOptimizer was applied. The parameters were: epochs = 20, batch_size = 128, learning rate = 0.001.
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
 
 After the data is normalized and the current parameters are set, the training accuracy gets closer to 1,
 but the validation accuracy kept getting lower than expected, which might mean the model was over-fitting.
@@ -68,9 +68,9 @@ The final model results:
 * validation set accuracy of 0.948
 * test set accuracy of 0.920
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are the six German traffic signs that I found on the web. It's already processed to be 32x32x3 dimensions.
 
@@ -87,7 +87,7 @@ The granularity of having only 6 traffic signs is 16%, so perhaps by having more
 
 The third image (No vehicles) might be difficult to classify because there's noting inside, so the model must keep trying to match with something, since most of the signs with this shape has something inside.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
 
 For the first image, the model is completely sure that this is a "Right-of-way at the next intersection" sign (probability of 1.0).
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_1.png)
