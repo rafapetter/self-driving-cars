@@ -60,7 +60,9 @@ The AdamOptimizer was applied. The parameters were: epochs = 20, batch_size = 12
 
 After the data is normalized and the current parameters are set, the training accuracy gets closer to 1,
 but the validation accuracy kept getting lower than expected, which might mean the model was over-fitting.
+
 Then I added dropout units after two fully connected layers with keep_prob = 0.5, but both training and validation accuracies were low, which means the model might be under-fitting.
+
 Lastly I increased keep_prob to 0.7, to finally get the validation accuracy to over 0.93.
 
 The final model results:
