@@ -89,9 +89,23 @@ The third image (No vehicles) might be difficult to classify because there's not
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
 
+For the first image, the model is completely sure that this is a "Right-of-way at the next intersection" sign (probability of 1.0).
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_1.png)
+
+For the second image, the model is also completely sure that this is a "Ahead only" sign (probability of 1.0)
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_2.png)
+
+For the third image, the model is struggling to figure it out the "No vehicles" sign (probability of 0.58 for the first guess).
+Looking into the other guesses, it does get the circle shape right. The problem is what is inside, or even what it's not inside.
+Interesting to notice that on the fifth guess it gets right, but at only a 2% probability.
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_3.png)
+
+For the fourth image, the model is completely sure that this is a "Go straight or left" sign (probability of 1.0)
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_4.png)
+
+For the fifth image, the model is completely sure that this is a "General caution" sign (probability of 1.0)
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_5.png)
+
+For the sixth image, the model is quite sure that this is a "Road work" sign (probability of 0.87), though it has some indecisions as we notice
+the other guesses probabilities. It might be because the drawing inside the triangle is a bit more complex than, for instance, the previous triangle sign.
 ![alt text](https://raw.githubusercontent.com/rafapetter/self-driving-cars/master/Term1-Project2-Traffic-Sign-Classifier/project-images/OutputSoftmax_6.png)
