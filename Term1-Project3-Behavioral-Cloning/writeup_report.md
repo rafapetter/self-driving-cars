@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [image4]: ./resources/recovery_3.jpg "Recovery - center"
 [image5]: ./resources/normal_image.jpg "Normal"
 [image6]: ./resources/flipped_image.jpg "Flipped"
-[video]: ./resources/run1.mp4 "First Track"
+[video]: ./video.mp4 "First Track"
 
 ---
 ### Files Submitted & Code Quality
