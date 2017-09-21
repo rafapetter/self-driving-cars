@@ -7,10 +7,10 @@ My status in the program is:
     * Lesson 1 completed
     * Project 1 completed
     * Lesson 2 completed
-    * Project 2 deliveried
-    * Lesson 3 ongoing
-    * Project 3 none
-    * Lesson 4 none
+    * Project 2 completed
+    * Lesson 3 completed
+    * Project 3 delivered
+    * Lesson 4 ongoing
     * Project 4 none
     * Lesson 5 none
     * Project 5 none
