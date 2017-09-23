@@ -85,6 +85,8 @@ The warp function uses the transformation matrix to transform the image from our
 
 - And finally, we collect the data created in this method and return it.
 
+![alt text][image6]
+
 #### 2.5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 For curve radius I first get new coefficients for curvature in the real world, not pixel space. Then calculate the radius with the new polynomial.
