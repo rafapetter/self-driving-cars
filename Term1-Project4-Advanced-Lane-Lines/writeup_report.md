@@ -19,12 +19,13 @@ The goals / steps of this project are the following:
 
 [image1]: ./output_images/boards_calibrated.png "Boards Calibrated"
 [image2]: ./output_images/undist_img.jpg "Undistorted Images"
-[image3]: ./output_images/yellow_line_detection.jpg "Yellow Line Detection"
-[image4]: ./output_images/binary_channel.jpg "Binary Channel"
-[image5]: ./output_images/undistorted_straight_lines.jpg "Undistorted Straight Lines"
-[image6]: ./output_images/lane_polynomial.jpg "Lane Polynomial"
-[image7]: ./output_images/lane_plotting.jpg "Lane Plotting"
-[video1]: ./video_output.mp4 "Video Output"
+[image3]: ./output_images/yellow_line_detection.png "Yellow Line Detection"
+[image4]: ./output_images/binary_channel.png "Binary Channel"
+[image5]: ./output_images/undistorted_straight_lines.png "Undistorted Straight Lines"
+[image6]: ./output_images/lane_polynomial.png "Lane Polynomial"
+[image7]: ./output_images/lane_plotting.png "Lane Plotting"
+[video]: ./video_output.mp4 "Video Output"
+
 ---
 
 ### Camera Calibration
@@ -84,8 +85,6 @@ The warp function uses the transformation matrix to transform the image from our
 
 - And finally, we collect the data created in this method and return it.
 
-![alt text][image6]
-
 #### 2.5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 For curve radius I first get new coefficients for curvature in the real world, not pixel space. Then calculate the radius with the new polynomial.
@@ -111,7 +110,7 @@ Final video output is saved at ![Video Output][video]
 #### 4.1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 When taking the harder_challenge_video.mp4 video I've found a few issues related to:
-- the similarity of colors from the road and lane lines, 
+- the similarity of colors from the road and lane lines,
 - shadows over the lines.
 
 Reprojecting into birds-eye view and fitting lane lines by polynomial is promising method which may find not only straight lane lines but also curved ones. But it is not robust enough to deal with complex environment with tree shadows, road defects, brightness/contrast issues. It will be effective on environments where lane lines are bright, contrast, not occluded or overlapped.
