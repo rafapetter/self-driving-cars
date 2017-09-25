@@ -15,9 +15,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 [image1]: ./output_images/car_notcar.png
-[image2]: ./output_images/car_notcar_hog.jpg
-[image3]: ./output_images/detect_car.jpg
-[image4]: ./output_images/heatmap.jpg
+[image2]: ./output_images/car_notcar_hog.png
+[image3]: ./output_images/detect_car.png
+[image4]: ./output_images/heatmap.png
 [image5]: ./output_images/vehicle_lane_detection.png
 [video]: ./project_video_output.mp4
 
