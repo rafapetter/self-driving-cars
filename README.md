@@ -11,8 +11,10 @@ My status in the program is:
     * Lesson 3 completed
     * Project 3 completed
     * Lesson 4 completed
-    * Project 4 delivered
-    * Lesson 5 ongoing
-    * Project 5 none
+    * Project 4 completed
+    * Lesson 5 completed
+    * Project 5 delivered
   * ### Term 2
+    * Lesson 1 none
+    * Project 1 none
   * ### Term 3
